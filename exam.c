@@ -60,7 +60,7 @@ FILE *Input, *OutQst, *OutAns;
 size_t MemSize;
 time_t t;
 int ChapterNo, QuestionNo, AnswerNo;
-int Trace = 0;
+int Trace = 1;
 int i, j;
 char *endptr;
 
