@@ -1,5 +1,6 @@
 # exam-eval
-Exam generates questionaire with random order of questions and answers for multiple-choice exam and Eval evaluates the results.
+Exam generates questionaire with random order of questions and answers for multiple-choice exam and
+Eval evaluates the results.
 
 ./exam 
 exam InFile SerialNumber NoOfQuestions1 NoOfQuestions2 ...
