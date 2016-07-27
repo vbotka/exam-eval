@@ -12,7 +12,6 @@ NoOfQuestions2 .... number of questions from Chapter 2
 ./eval
 eval SerialNumber
 
-
 Create questionaire
 ./exam Questions-Answers-OS-example-SK.txt 201 3 4 3 2 2 11
 Files 201.ans and 201.qst will be created.
