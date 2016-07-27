@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall
+CFLAGS=-Wall -g
 
 all: exam eval
 
@@ -14,3 +14,4 @@ clean-all:
 	rm -f exam eval
 	rm -f *.o
 	rm -f *~
+	rm -f \#*

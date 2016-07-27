@@ -15,7 +15,7 @@ int main ( int argc, char *argv[] ) {
   char Ans ;
   int i ;
   if (argc < 2) {
-    printf ( "EVAL SerialNumber\n" ) ;
+    printf ( "eval SerialNumber\n" ) ;
     exit (1) ;
   }
   if (( InExm = fopen (strcat(strcpy(Buffer,argv[1]),".exm"), "r")) == NULL ) {

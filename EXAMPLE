@@ -1,7 +1,7 @@
 # exam-eval
-Exam generates questionaire with random order of questions and answers for multiple-choice exam and
-Eval evaluates the results.
 
+Exam generates questionaire with random order of questions and answers
+for multiple-choice exam and Eval evaluates the results.
 
 ./exam
 exam InFile SerialNumber NoOfQuestions1 NoOfQuestions2 ...
@@ -10,7 +10,6 @@ SerialNumber ...... name of the output files (*.ans, *.qst)
 NoOfQuestions1 .... number of questions from Chapter 1
 NoOfQuestions2 .... number of questions from Chapter 2
 ....
-
 
 ./eval
 eval SerialNumber
@@ -30,5 +29,9 @@ Evaluate results
 ----------------
 prepare file 201.exm with the answers and run the eval programm
 ./eval 201
-results will be printed
---
+SERIAL No: 201
+         B X A X A X B B A B D D A B A A A B A D C B C C C ~
+CORRECT: B B A C A B B B A B D D A B C C C B A D C B C C C
+
+CORRECT: 19  WRONG: 3	OMITTED: 3
+---------------------------------------------------------
