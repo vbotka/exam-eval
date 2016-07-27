@@ -23,4 +23,3 @@ Evaluate results
 prepare file 201.exm with the answers and run the eval programm
 ./eval 201
 results will be printed
-
