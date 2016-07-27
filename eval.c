@@ -11,7 +11,7 @@ char Buffer[MAXSTRING], Exm[MAXQUESTIONS] ;
 FILE *InExm, *InAns ;
 int Right=0, Wrong=0, Omitt=0 ;
 
-main ( int argc, char *argv[] ) {
+int main ( int argc, char *argv[] ) {
   char Ans ;
   int i ;
   if (argc < 2) {

@@ -1,0 +1,460 @@
+OPERACNE SYSTEMY (1988, STU Bratislava, SK)
+$KAPITOLA 1 (Sprava pamate 12 otazok)
+# Operacne systemy mozeme rozdelovat
+@ podla poctu uloh a poctu uzivatelov, ktore obsluhuju.
+@ len podla poctu uloh, ktore obsluhuju.
+@ len podla poctu uzivatelov, ktore obsluhuju.
+@ Neplati ani jedna z ostatnych moznosti.
+# Pri viacnasobnej suvislej alokacii pamate moze byt pamat rozdelena na
+@ pevne, alebo pohyblive oblasti.
+@ len na pevne oblasti.
+@ len na pohyblive oblasti.
+@ Neplati ani jedna z ostatnych moznosti.
+# Pohyblive oblasti pamate mozu byt posunute operacnym systemom ak obsahuju
+@ kod aj data.
+@ len kod.
+@ len data.
+@ Neplati ani jedna z ostatnych moznosti.
+# Operacny system moze odlozit rozpracovany program na disk (swapping) ak
+@ je potrebna pamat pre program vacsieho vyznamu.
+@ o to poziada uzivatel.
+@ nastala chyba kontrolneho suctu pri citani pamate.
+@ Neplati ani jedna z ostatnych moznosti.
+# Nesuvisle pamatove oblasti mozu byt adresovane pomocou
+@ segmentovania, alebo strankovania.
+@ len segmentovania.
+@ len strankovania.
+@ Neplati ani jedna z ostatnych moznosti.
+# Pri adresovani pamate pomocou segmentovania sa adresa sklada
+@ so segmentu a offsetu.
+@ so segmentu a tabulky segmentov.
+@ len s offsetu.
+@ Neplati ani jedna z ostatnych moznosti.
+# Pri adresovani pamate pomocou strankovania sa adresa sklada
+@ s adresy stranky a indexu vo vnutri stranky.
+@ s adresy stranky a tabulky stranok.
+@ len s indexu vo vnuri stranky.
+@ Neplati ani jedna z ostatnych moznosti.
+# Pri adresovani pamate pomocou strankovania je velkost stranky urcena
+@ hardwarom pocitaca.
+@ uzivatelom.
+@ konfiguraciou operacneho systemu.
+@ Neplati ani jedna z ostatnych moznosti.
+# Ak bola stranka (alebo segment) oblozena z pamate na disk (swapping) operacny system
+@ ju zavedie spat do pamate, ak nastane chyba stranky (alebo segmentu).
+@ ju uz nemoze zaviest spat do pamete.
+@ zmensi jej velkost.
+@ Neplati ani jedna z ostatnych moznosti.
+# Efektivnost strankovania zavisi od
+@ velkosti stranky.
+@ od velkosti tabulky stranok.
+@ od zatazenia operacneho systemu.
+@ Neplati ani jedna z ostatnych moznosti.
+# Ak pri vytvoreni procesu zavedieme vsetky jeho segmenty (alebo stranky) do pamate,
+@ proces pobezi rychlejsie.
+@ neplytvame pamatou.
+@ proces nepobezi rychlejsie.
+@ efektivne vyuzivame pamat.
+# Ak pri vytvoreni procesu nezavedieme vsetky jeho segmenty (alebo stranky) do pamate,
+@ proces pobezi pomalsie.
+@ zavadzanie procesu do pamate trva dlho.
+@ proces nepobezi pomalsie.
+@ nevyuzivame efektivne pamat.
+$KAPITOLA 2 (Sprava procesora 12 otazok)
+# Aby sa uloha mohla vykonavat potrebuje
+@ pamat a procesor.
+@ len pamat.
+@ len procesor.
+@ nepotrebuje ani pamat ani procesor.
+# Proces moze vykonavat instrukcie ak je v stave
+@ Run.
+@ Ready.
+@ Blocked.
+@ Neplati ani jedna z ostatnych moznosti.
+# Proces, ktory je pripraveny vykonavat instrukcie, ak mu dispecer prideli procesor je v stave
+@ Ready.
+@ Run.
+@ Blocked.
+@ Neplati ani jedna z ostatnych moznosti.
+# Proces, ktory nemoze vykonavat instrukcie, pretoze caka na nejaku udalost je v stave
+@ Blocked.
+@ Ready.
+@ Run.
+@ Neplati ani jedna z ostatnych moznosti.
+# Naplanovanie procesu vykonava planovac (scheduler) a zaradi ho do stavu
+@ Ready.
+@ Blocked.
+@ Run.
+@ Neplati ani jedna z ostatnych moznosti.
+# Ak caka v stave Ready proces P1 s vyssou prioritou, ako ma proces P2 v stave Run dispecer
+@ pozastavi proces P2 a spusti proces P1.
+@ presunie proces P1 do stavu Blocked.
+@ pozastavi proces P1 aj proces P2.
+@ Neplati ani jedna z ostatnych moznosti.
+# Ak prideluje dispecer systemu procesor vsetkym procesom rovnako,
+@ kratke procesy cakaju tak isto dlho ako dlhe procesy.
+@ dalsi proces bude presunuty do stavu Run, ak proces v stave Run vykona vsetky instrukcie a skonci.
+@ do stavu Run bude presunuty ten proces, ktory trva najmenej.
+@ Neplati ani jedna z ostatnych moznosti.
+# Ak prideluje dispecer procesor sposobom Round-Robin,
+@ kazdemu procesu je prideleny procesor na rovnaky cas.
+@ nasledujuci proces, ktoremu bude prideleny procesor, je ten, ktoremu do skoncenia chyba najmensi cas.
+@ musime dopredu poznat dlzku procesu.
+@ Neplati ani jedna z ostatnych moznosti.
+# Ak su procesy zoradene vo viacnasobnych frontach,
+@ umoznuje to pouzitie viacerych mechanizmov vypravovania procesov.
+@ umoznuje to pouzitie statickeho priradenia procesu do fronty.
+@ neumoznuje to pouzitie dynamickeho priradovania procesu do fronty.
+@ neumoznuje to pouzitie statickeho ani dynamickeho priradovania procesu do fronty.
+# Pri volani podprogramu sa odklada obsah registrov
+@ do zasobnika (stack).
+@ na disk.
+@ na disketu.
+@ do volneho priestoru v pameti, ktora nebola pridelena ziadnemu procesu.
+# Prerusenie casovacom sposobi
+@ predanie riadenia dispecerovi systemu.
+@ prechod procesu, ktory cakal na dokoncenie vstupno/vystupnej operacie, do stavu Run.
+@ predanie riadenia spravcovi chyb stranok (alebo segmentov).
+@ prechod dispecera do stavu Ready.
+# Priorita prerusenia moze byt
+@ pevna (zabudovana v hardware), alebo programovatelna.
+@ len pevna (zabudovana v hardware).
+@ len programovatelna.
+@ nemoze byt pevna (zabudovana v hardware) ani programovatelna.
+$KAPITOLA 3 (Sprava procesov 10 otazok)
+# Procesy, ktore sa vo vykonavani prekryvaju (v sirsom zmysle),
+@ su konkurentne.
+@ su vsetky naraz v stave Run.
+@ su vsetky naraz v stave Blocked.
+@ nie su konkurentne.
+# Vo vnutri kritickej oblasti
+@ moze byt len jeden proces.
+@ moze byt viac procesov.
+@ nemoze byt ani jeden proces.
+@ je semafor.
+# Vzajomne vylucenie procesov mozno realizovat pomocou
+@ semaforu.
+@ postovej schranky.
+@ segmentovania.
+@ strankovania.
+# Proces, ktory vstupi do kritickej oblasti musi
+@ nastavit semafor do stavu Stop.
+@ nastavit semafor do stavu Volno.
+@ prejst do stavu Ready.
+@ prerusit casovac.
+# Proces, ktory opusti kriticku oblast musi
+@ nastavit semafor do stavu Volno.
+@ nastavit semafor do stavu Stop.
+@ prejst do stavu Run.
+@ prerusit casovac.
+# Ak proces chce vstupit do kritickej oblasti a semafor je v stave Stop, proces
+@ je pozastaveny (prejde do stavu Blocked).
+@ sa ukonci.
+@ nastavi semafor do stavu Volno.
+@ nastavi semafor do stavu Stop.
+# Ak potrebujeme vseobecny prostriedok pre komunikaciu medzi viacerymi procesmi, pouzijeme
+@ postovu schranku.
+@ synchronizaciu Producent-Konzument.
+@ pridelovanie procesora sposobom Round-Robin.
+@ viacnasobne fronty.
+# Pre komunikaciu medzi procesmi typu Producent-Konzument postaci
+@ vyrovnavacia pamat (buffer).
+@ postova schranka.
+@ pridelovanie procesora sposobom Round-Robin.
+@ pouzitie viacnasobnych front.
+# Ak proces caka na spravu z postovej schranky (wait message) musi
+@ specifikovat od koho ju caka.
+@ uvolnit semafor.
+@ zablokovat semafor.
+@ prejst do stavu Run.
+# Ak proces poslal spravu do postovej schranky pre adresata, ktory neexistuje a caka na odpoved
+@ dostane odpoved od operacneho systemu.
+@ nedostane odpoved.
+@ prejde do stavu Run.
+@ uvolni semafor.
+$KAPITOLA 4 (MS DOS 10 otazok)
+# Spravu pamate, spravu suborov a spustanie programov operacneho systemu MS DOS zabezpecuje
+@ jadro operacneho systemu.
+@ BIOS.
+@ COMMAND.COM.
+@ uzivatel.
+# Rozhranie medzi operacnym systemom a uzivatelom (shell) operacneho systemu MS DOS zabezpecuje
+@ COMMAND.COM.
+@ jadro operacneho systemu.
+@ BIOS.
+@ lubovolny program.
+# COMMAND.COM pozostava z
+@ rezidentnej, inicializacnej a prechodovej casti.
+@ rezidentnej, inicializacnej, prechodovej casti a BIOSu.
+@ inicializacnej a prechodovej casti.
+@ rezidentnej a prechodovej casti.
+# Rezidentna cast COMMAND.COMu sa nachadza v adresnom priestore pamate spravovanom operacnym systemom MS DOS
+@ nad jadrom operacneho systemu.
+@ na zaciatku pamate.
+@ na konci pamate.
+@ pod jadrom operacneho systemu.
+# Prechodova cast cast COMMAND.COMu sa nachadza v adresnom priestore pamate spravovanom operacnym systemom MS DOS
+@ na konci pamate.
+@ nad jadrom operacneho systemu.
+@ na zaciatku pamate.
+@ pod jadrom operacneho systemu.
+# Ked sa ukonci aplikacny program v operacnom systeme MS DOS, rezidentna cast COMMAND.COMu
+  skonroluje, ci nie je poskodena prechodova cast COMMAND.COMu.
+@ Ak je poskodena, zavedie ju znovu z disku.
+@ Ak je poskodena, vypise chybove hlasenie.
+@ Ak nie je poskodena, zavedie ju znovu z disku.
+@ Ak nie je poskodena, vypise chybove hlasenie.
+# V operacnom systeme MS DOS sa nachadza pamat ROM (obsahujuca diskovy zavadzaci program) od adresy
+@ 0FFFF0H
+@ 000000H
+@ 000100H
+@ 000F00H
+# Korenovy adresar kazdeho disku v operacnom systeme MS DOS musi obsahovat v prvom sektore
+@ subory IO.SYS a MSDOS.SYS.
+@ subor IO.SYS.
+@ subor MSDOS.SYS.
+@ Neplati ani jedna z ostatnych moznosti.
+# Program segment prefix je rezervovana oblast s dlzkou 256 byte,
+@ ktoru ma pridelenu kazdy program v operacnom systeme MS DOS.
+@ ktoru ma pridelenu program typu COM v operacnom systeme MS DOS.
+@ ktoru ma pridelenu program typu EXE v operacnom systeme MS DOS.
+@ Neplati ani jedna z ostatnych moznosti.
+# Maximalna velkost programu typu COM je
+@ 64 kByte.
+@ 640 kByte.
+@ 10 kByte.
+@ 100 kByte.
+$KAPITOLA 5 (OS/2 8 otazok )
+# Operacny system OS/2 umoznuje adresaciu pomocou
+@ segmentovania.
+@ strankovania.
+@ segmentovania, alebo strankovania.
+@ Neplati ani jedna z ostatnych moznosti.
+# Operacny system OS/2 umoznuje procesoru 80286 pracovat
+@ v REAL mode, alebo PROTECTED mode.
+@ v REAL mode.
+@ v PROTECTED mode.
+@ Neplati ani jedna z ostatnych moznosti.
+# Aplikacny program v operacnom systeme OS/2 na privilegovanej urovni PL 3
+@ nemoze vykonavat instrukcie IN, OUT.
+@ moze vykonavat instrukcie IN, OUT.
+@ nemoze vykonavat instrukciu IN.
+@ moze vykonavat instrukciu OUT.
+# Ak je operacny system OS/2 konfigurovany tak, ze neobsahuje DOS kompatibilne prostredie (RMSIZE=0),
+@ pamatova oblast po adresu 640 kByte sa vyuzije pre aplikacne programy OS/2.
+@ pamatova oblast po adresu 640 kByte zostane nevyuzita.
+@ pamatova oblast po adresu 512 kByte zostane nevyuzita.
+@ pamatova oblast po adresu 320 kByte zostane nevyuzita.
+# V operacnom systeme OS/2 'THREAD' oznacuje
+@ najmensiu jednotku, ktorej moze byt prideleny procesor.
+@ privilegovane urovne procesov.
+@ segmentaciu pamate.
+@ program pre zavedenie systemu.
+# Operacny system OS/2
+@ umoznuje dynamicky menit prioritu procesu.
+@ neumoznuje dynamicky menit prioritu procesu.
+@ umoznuje dynamicky menit prioritu procesu v triede casovo kritickych procesov.
+@ Neplati ani jedna z ostatnych moznosti.
+# Prikaz IOPL=YES v subore CONFIG.SYS operacneho systemu OS/2
+@ umozni programom na urovni PL2 vykonavat priamo instrukcie IN, OUT.
+@ umozni vsetkym programom vykonavat priamo instrukcie IN, OUT.
+@ zakaze programom na urovni PL2 vykonavat priamo instrukcie IN, OUT.
+@ zakaze vsetkym programom vykonavat priamo instrukcie IN, OUT.
+# Prikaz MEMMAN=SWAP,MOVE v subore CONFIG.SYS operacneho systemu OS/2
+@ umozni odkladanie rozpracovanych programov na disk (swapping) a umozni posuvanie pamatovych oblasti.
+@ zakaze odkladanie rozpracovanych programov na disk (swapping) a umozni posuvanie pamatovych oblasti.
+@ zakaze odkladanie rozpracovanych programov na disk (swapping) a zakaze posuvanie pamatovych oblasti.
+@ umozni odkladanie rozpracovanych programov na disk (swapping) a zakaze posuvanie pamatovych oblasti.
+$KAPITOLA 6
+# cd \
+@ nastavi hlavny adresar
+@ zmeni hlavny adresar na vedlajsi
+@ nastavi hlavny adresar na disketovej jednotke
+@ prehladava hlavny adresar
+# COMP
+@ externy prikaz na porovnanie obsahu dvoch suborov
+@ externy prikaz na porovnanie dvoch adresarov
+@ prikaz na porovnanie dvoch diskiet
+@ prikaz na kompresiu udajov na disku (diskete)
+# COPY SUBOR1 CON
+@ zobrazi subor SUBOR1 na obrazovke monitora ako pri prikaze TYPE
+@ skopiruje subor SUBOR1 na disketovu jednotku
+@ skopiruje subor SUBOR1 na pevny disk
+@ skopiruje adresar SUBOR1 na disketovu jednotku
+# Aktualny datum sa zadava v tvare:
+@ format zobrazenia datumu zavisi od prikazu COUNTRY v subore CONFIG.SYS, resp. od volby pomocou prikazu select
+@ dd-mm-yy (den, mesiac, rok)
+@ mm-dd-yy
+@ yy-mm-dd
+# A>dir
+@ vypis platneho adresara diskety
+@ vypis aktualneho adresara pevneho disku
+@ nastavenie cesty k hlavnemu adresaru diskety
+@ zoradenie suborov v hlavnom adresari na diskete podla datumu
+# DISKCOMP
+@ externy prikaz na porovnanie obsahu diskiet
+@ externy prikaz na kompresiu udajov (programov) na disku
+@ externy prikaz na kompresiu udajov (programov) na diskete
+@ externy prikaz na porovnanie obsahu diskiet a diskov
+# Zadanie parametra /S za prikazom FORMAT znamena:
+@ na formatovanu disketu sa skopiruju systemove subory, pripadne si pocitac vyziada disketu s tymito subormi, ak nie su na
+  aktualnom disku
+@ moznost kedykolvek zastavit proces formatovania disku
+@ zamedzenie moznosti zastavenia (prerusenia) procesu formatovania disku
+@ formatovanie jednostrannej diskety
+# MD
+@ je interny prikaz na vytvorenie noveho adresara
+@ je externy prikaz na vytvorenie noveho adresara
+@ je interny prikaz na vypis aktualneho adresara na obrazovku
+@ je externy prikaz na vypis aktualneho adresara na obrazovku
+# REN *.TMP *.BAK
+@ zmeni pripony vsetkych .TMP suborov na .BAK
+@ vypise na obrazovku vsetky subory s priponou .TMP a .BAK
+@ zmeni pripony vsetkych .BAK suborov na .TMP
+@ vymaze vsetky subory s priponami .TMP a .BAK
+# RD
+@ zrusi adresar na specifikovanom disku
+@ umozni zmenu aktualneho disku
+@ vypise obsah hlavneho adresara na aktualnom disku na obrazovku
+@ umoznuje prehladavanie aktualneho adresara
+# TREE
+@ je externy prikaz na zobrazenie vsetkych ciest k adresarom, pristupnych na specifikovanom alebo preddefinovanom disku
+@ je interny prikaz na zobrazenie vsetkych ciest k adresarom
+@ vytlaci zoznam suborov na aktualnom disku
+@ vytlaci zoznam adresarov na aktualnom disku
+# TYPE
+@ je interny prikaz na vypisanie obsahu specifikovanych suborov na obrazovku
+@ je externy prikaz na vypisanie obsahu specifikovanych suborov na obrazovku, resp. tlaciaren
+@ je externy prikaz pre tlacenie suboru na tlaciaren
+@ je interny prikaz pre tlacenie suboru na tlaciaren, resp. suradnicovy zapisovac
+# VER
+@ je interny prikaz pre zobrazenie cisla verzie aktivneho operacneho systemu
+@ je interny prikaz na verifikaciu zapisanych udajov na disk
+@ je externy prikaz na verifikaciu udajov na diskete
+@ je externy prikaz na verifikaciu operacneho systemu
+# VOL
+@ je interny prikaz na zobrazenie navestia specifikovaneho disku
+@ je interny prikaz na zapisanie navestia specifikovaneho disku
+@ je externy prikaz na zistenie typu diskety
+@ je externy prikaz na zistenie typu disku
+# XCOPY
+@ je externy prikaz na selektivne kopirovanie skupin suborov, ktore mozu obsahovat nizsie urovne podadresarov
+@ je externy prikaz na selektivne kopirovanie skupin suborov
+@ je externy prikaz na selektivne kopirovanie skupin suborov i adresarov
+@ kopiruje subory z diskety na disketu spolu s formatovanim cielovej diskety
+# VMS (Virtual Memory System)
+@ je operacny system pre pocitace typu VAX od fy DEC
+@ je prikaz MS DOSu pre vytvorenie virtualneho disku
+@ je rozsirenie operacnej pamate o virtualnu pamat instalovanu na disku
+@ je uzivatelsky program urceny pre docasne zalohovanie udajov (programov)
+# Object Linking And Embedding (OLE)
+@ umoznuje v operacnom systeme WINDOWS verzia 3.1 novy sposob vstupu udajov (hovorena rec, rukopis, grafika atd.)
+@ umoznuje objektove programovanie pod operacnym systemom OS/2
+@ umoznuje zvysit komfort obsluhy pocitacov typu IBM PC AT/386 pracujucich pod operacnym systemom DR DOS
+@ umoznuje pracu MS DOSu pod operacnym systemom OS/2
+# Concurent DOS (CDOS)
+@ umoznuje "multitasking"
+@ umoznuje "multiuser"
+@ neumoznuje "multiuser"
+@ neumoznuje "multitasking"
+# CHDIR A:\VYUKA
+@ zmeni adresar na disku a: na \vyuka
+@ nastavi hlavny adresar na disku a:
+@ zobrazi cestu k aktualnemu adresaru a:\vyuka
+@ zmeni cestu na disk a:
+# CLS je
+@ interny prikaz, ktory vymaze obrazovku a zobrazi prompt operacneho systemu
+@ externy prikaz sluziaci na prehladavanie a testovanie disku
+@ interny prikaz na zastavenie vypisu udajov na obrazovku
+@ prikaz, po vykonani ktoreho pocitac hlasi stav testovaneho disku a operacnej pamate
+# COPY
+@ je interny prikaz na kopirovanie a spajanie suborov
+@ je externy prikaz na kopirovanie suborov
+@ je externy prikaz na kopirovanie suborov a adresarov
+@ je interny prikaz na kopirovanie suborov
+# COPY SUBOR2 LPT1
+@ zabezpeci tlac suboru SUBOR2 (ako prikaz print)
+@ umozni skopirovat obsah suboru SUBOR2 do suboru LPT1
+@ umozni skopirovat obsah suboru SUBOR2 do adresara LPT1
+@ umozni skopirovat obsah suboru LPT1 do adresara SUBOR2
+# DEL (ERASE) su
+@ interne prikazy pre vymazanie suborov z disku
+@ externe prikazy pre vymazanie suborov z disku
+@ interne prikazy pre vymazanie suborov a adresarov zo specifikovaneho disku
+@ externe prikazy pre vymazanie suborov a adresarov zo specifikovaneho disku
+# Pouzitie prepinaca /W za prikazom DIR
+@ zabezpeci vypis len nazvov suborov a adresarov v stlpcoch vedla seba
+@ zabezpeci vypis suborov v aktualnom adresari na tlaciaren
+@ zabezpeci vypis hlavneho adresara na tlaciaren
+@ zabezpeci uplny vypis suborov v aktualnom adresari
+# DISKCOPY
+@ je externy prikaz pre skopirovanie zdrojovej diskety na cielovu disketu, ak je to potrebne, vykona sa aj formatovanie
+@ je externy prikaz na skopirovanie diskety alebo casti disku na druhy disk
+@ je externy prikaz na skopirovanie diskety alebo casti disku na disketu
+@ je interny prikaz na skopirovanie zdrojovej diskety na cielovu vopred naformatovanu disketu
+# Prikaz LABEL je
+@ externy prikaz, urceny na vytvorenie, zmenu, alebo zrusenie navestia disku
+@ externy prikaz na zistenie typu diskety
+@ interny prikaz na zistenie typu diskety
+@ interny prikaz, urceny na vytvorenie, zmenu, alebo zrusenie pomenovania disku
+# Prikaz MORE v spojeni s urcitym programom zabezpeci,ze
+@ po zaplneni obsahu jednej obrazovky vypisanymi udajmi sa vypis zastavi a caka na stlacenie lubovolnej klavesy
+@ po zaplneni obsahu jednej obrazovky vypisanymi udajmi sa vypis zastavi po stlaceni klavesy ENTER
+@ bude na obrazovke priebezne zobrazovany vypis udajov
+@ mozeme doplnat udaje do zvoleneho programu (suboru)
+# Prikaz PRINT je
+@ externy prikaz pre vytlacenie specifikovaneho suboru, pripadne ho zaradi do fronty na tlaciaren
+@ interny prikaz pre vytlacenie suboru na obrazovku
+@ interny prikaz na vytlacenie aktualneho adresara
+@ externy prikaz na vytlacenie aktualneho adresara
+# Prikaz REN je
+@ interny prikaz urceny na zmenu nazvu suboru
+@ interny prikaz urceny na zmenu nazvu suboru, resp. adresara
+@ externy prikaz urceny na zmenu nazvu suboru, resp. adresara
+@ externy prikaz urceny na zmenu nazvu suboru
+# Ruseny adresar
+@ musi byt prazdny (obsahuje iba polozky   . , ..
+@ musi byt prazdny
+@ nemusi byt prazdny, zrusia sa naraz subory aj adresar
+@ nemusi byt prazdny, zrusi sa adresar a subory v nom sa autumaticky prepisu do adresara o uroven vyssiu
+# V pocitacoch typu PC AT
+@ nie je potrebne po zapnuti zadavat aktualny cas
+@ je potrebne po zapnuti vzdy zadat aktualny cas
+@ system neobsahuje hodiny
+@ system obsahuje hodiny ale nedaju sa nastavit
+# A>TREE B: /F >ZOZNAM.ADR
+@ vypise strukturu adresarov diskety B: s uvedenim nazvov suborov do suboru s nazvom ZOZNAM.ADR
+@ vypise strukturu adresarov diskety B: bez uvedenia nazvov suborov do suboru s nazvom ZOZNAM.ADR
+@ zoradi vsetky adresare podla abecedy vzostupne (a - z)
+@ zoradi vsetky adresare podla abecedy zostupne (z - a)
+# Pre vypis suboru na tlaciaren
+@ je mozne pouzit aj klavesu PRINT SCREEN
+@ nie je mozne pouzit klavesu PRINT SCREEN
+@ je mozne pouzit aj kombinaciu klaves "ALT+P"
+@ nie je mozne pouzit kombinaciu klaves "ALT+P"
+# Sprava:"IBM Personal Computer DOS VERSION 3.20" sa zobrazi na obrazovke
+@ po prikaze VER
+@ po prikaze VERIFY
+@ po prikaze VDISK
+@ po prikaze RAMDISK.SYS
+# Prikaz VERIFY
+@ nefunguje pri pocitacovych sietach
+@ je nezavisly na type pouzitej pocitacovej siete
+@ je zavisly na type pouzitej pocitacovej siete
+@ testuje pevny disk na virusy
+# UNIX je
+@ Multi User / Multi Tasking
+@ Multi User / Single Tasking
+@ Single User / Multi Tasking
+@ Single User / Single Tasking
+# Pod operacnym systemom OS/2 (do verzie 2.0)
+@ moze pracovat MS DOS
+@ nemoze pracovat MS DOS
+@ moze pracovat MS DOS aj WINDOWS
+@ nemoze pracovat ani MS DOS ani WINDOWS
+# Medzi najvyznamnejsie odnoze UNIXu patria operacne systemy
+@ XENIX, AIX, AU/X
+@ XENIX, AU/X, POSIX
+@ XENIX, AU/X, SAA
+@ AIX, AU/X, VMS
+~
